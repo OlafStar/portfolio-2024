@@ -1,0 +1,74 @@
+.heroSectionContainer {
+    height: 100vh;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: 1080px) {
+        padding: 0 clamp(0.5rem, -1.395rem + 9.474vw, 5rem);
+    }
+}
+
+.heroSectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @media (max-width: 1080px) {
+      gap: 32px;
+    }
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroMainText {
+    font-weight: 600;
+    font-size: clamp(8rem, -4rem + 13.333vw, 12rem); // 128 - 192 | 1440 - 1920
+    line-height: 100%;
+    @media (max-width: 1080px) {
+        font-size: clamp(3rem, 0.895rem + 10.526vw, 8rem); // 48 - 128 | 320 - 1080
+    }
+}
+
+.heroDescriptionContainer {
+    align-self: end;
+    max-width: clamp(
+        39.375rem,
+        -24.375rem + 70.833vw,
+        60.625rem
+    ); // 630 - 970 | 1440 - 1920
+
+    @media (max-width: 1080px) {
+        align-self: auto;
+    }
+}
+
+.heroDescriptionText {
+    font-weight: 300;
+    font-size: clamp(2rem, -1rem + 3.333vw, 3rem); // 32 - 48 | 1440 - 1920
+
+    @media (max-width: 1080px) {
+      font-size: clamp(1.25rem, 0.934rem + 1.579vw, 2rem); // 20 - 32 | 320 - 1080
+    }
+}
+
+.bottomLineContainer {
+    position: absolute;
+    bottom: 16px;
+
+    @media (max-width: 1080px) {
+      position: relative;
+      bottom: 0;
+      margin-top: 64px;
+    }
+}
+
+.bottomLineText {
+    font-weight: 300;
+    font-size: clamp(1rem, -2rem + 3.333vw, 2rem); // 16 - 32 | 1440 - 1920
+}
