@@ -1,0 +1,45 @@
+.stripeContainer {
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+
+    @media (max-width: 1080px) {
+      gap: clamp(1.25rem, -1.908rem + 15.789vw, 8.75rem);
+    }
+}
+
+.stripe {
+    width: 110vw;
+    padding: 32px 0;
+    font-size: 128px;
+    line-height: 100%;
+    font-weight: 600;
+
+    @media (max-width: 1080px) {
+        font-size: clamp(4rem, 2.316rem + 8.421vw, 8rem);
+    }
+}
+
+.stripeWhite {
+    background-color: white;
+    color: black;
+}
+
+.stripeBlack {
+    background-color: black;
+    color: white;
+}
+
+.stripeText {
+    margin-right: 40px;
+}
+
+.upperStripe {
+    transform: rotate(-10deg) translateX(-5%);
+    z-index: 2;
+}
+
+.bottomStripe {
+    transform: rotate(10deg) translateX(-5%);
+}

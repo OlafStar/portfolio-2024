@@ -1,21 +1,4 @@
-.marquee {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: fit-content;
-  overflow-x: hidden;
-  height: 152px;
-}
-
-.track {
-  top: 50%;
-  position: absolute;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee 32s linear infinite;
-}
-
-@keyframes marquee {
-  from { transform: translate(0, -50%); }
-  to { transform: translate(-50%, -50%); }
+.outline {
+  -webkit-text-stroke: 1px black;
+  color: #f2f2f2;
 }

@@ -1,20 +1,27 @@
 import React, {PropsWithChildren} from 'react';
+import Marquee from 'react-fast-marquee';
 import styles from './styles.module.scss';
 
-const InfiniteTitle = ({children}: PropsWithChildren<{}>) => {
-    // Determine the number of times each child should be cloned
-    // Adjust this number based on your needs and the size of your content
-    const cloneCount = 5;
+type MarqueeProps = React.ComponentProps<typeof Marquee>;
+
+const InfiniteTitle = ({
+    children,
+    enableOutline,
+    marqueeOptions
+}: PropsWithChildren & {enableOutline?: boolean, marqueeOptions?: MarqueeProps}) => {
+    const cloneCount = 6;
 
     const clonedChildren = () => {
         return React.Children.map(children, (child) => {
             if (React.isValidElement(child)) {
-                // Create an array to hold the clones
                 const clones = [];
                 for (let i = 0; i < cloneCount; i++) {
                     clones.push(
                         React.cloneElement(child, {
-                            key: i, // Ensure each clone has a unique key
+                            key: i,
+                            className: `${child.props.className || ''} ${
+                                i % 2 === 0 && enableOutline && styles.outline
+                            }`,
                         }),
                     );
                 }
@@ -25,13 +32,11 @@ const InfiniteTitle = ({children}: PropsWithChildren<{}>) => {
     };
 
     return (
-        <div className={styles.marquee}>
-            <div className={styles.track}>
-                {clonedChildren()}
-                {clonedChildren()}
-                {clonedChildren()}
-            </div>
-        </div>
+        <Marquee {...marqueeOptions}>
+            {clonedChildren()}
+            {clonedChildren()}
+            {clonedChildren()}
+        </Marquee>
     );
 };
 

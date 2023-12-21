@@ -7,7 +7,7 @@ const WorksSection = () => {
     return (
         <div>
             <div className={styles.titleWrapper}>
-                <InfiniteTitle>
+                <InfiniteTitle enableOutline>
                     <span className={styles.sectionTitle}>{'WORKS'}</span>
                 </InfiniteTitle>
             </div>
