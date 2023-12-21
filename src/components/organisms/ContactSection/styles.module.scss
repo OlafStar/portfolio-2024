@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-bottom: 28px;
+}
+
+.mainTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mainText {
+    font-weight: 600;
+    font-size: clamp(3rem, 0.895rem + 10.526vw, 8rem);
+    line-height: 100%;
+    text-align: center;
+}
+
+.linksDesktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32px;
+    line-height: 100%;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.linksMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 24px;
+    line-height: 100%;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.linksMobileBottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    padding: 24px 100px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 9999px;
+
+    @media (max-width: 768px) {
+        padding: 24px 0px;
+        margin: 0 clamp(0.5rem, -1.395rem + 9.474vw, 5rem);
+    }
+}
+
+.buttonText {
+    max-width: 174px;
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: auto;
+    }
+}
+
+.buttonContent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.additionalLink {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(to top right, transparent 50%, black 50%);
+        top: 4px;
+        left: -24px;
+    }
+}

@@ -5,7 +5,7 @@ import WorkElement from '~components/molecules/WorkElement';
 
 const WorksSection = () => {
     return (
-        <div>
+        <section>
             <div className={styles.titleWrapper}>
                 <InfiniteTitle enableOutline>
                     <span className={styles.sectionTitle}>{'WORKS'}</span>
@@ -16,7 +16,7 @@ const WorksSection = () => {
                     <WorkElement key={index} {...item} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
