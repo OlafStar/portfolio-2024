@@ -1,0 +1,10 @@
+.coverRevealContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.coverElement{
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: black;
+}

@@ -12,6 +12,16 @@ export const slideUp = {
     },
 };
 
+export const slideOutXRight = {
+    initial: {
+        x: '0%',
+    },
+    out: (delay: number) => ({
+        x: '110%',
+        transition: {delay: delay},
+    }),
+};
+
 export const opacity = {
     initial: {
         opacity: 0,
