@@ -8,7 +8,7 @@ const DescriptionSection = () => {
     return (
         <section className={styles.descriptionSectionContainer}>
             <MaxWidthWrapper>
-                <div className={styles.sectionContent}>
+                <div className={styles.sectionContent} data-scroll data-scroll-speed='0.15'>
                     <TextReveal
                         className={styles.textContent}
                         text={`Explore my work and witness how creativity is coded into every project. Let's transform your vision into a digital masterpiece!`}

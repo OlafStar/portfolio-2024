@@ -1,9 +1,8 @@
 'use client';
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './styles.module.scss';
 import {motion} from 'framer-motion';
-import {usePathname} from 'next/navigation';
-import {menuSlide} from './anim';
+import {menuSlide, slide} from './anim';
 
 const navItems = [
     {
@@ -25,9 +24,6 @@ const navItems = [
 ];
 
 export default function index() {
-    const pathname = usePathname();
-    const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-
     return (
         <motion.div
             variants={menuSlide}
@@ -37,25 +33,22 @@ export default function index() {
             className={styles.menu}
         >
             <div className={styles.body}>
-                <div
-                    onMouseLeave={() => {
-                        setSelectedIndicator(pathname);
-                    }}
-                    className={styles.nav}
-                >
+                <div className={styles.nav}>
                     <div className={styles.header}>
                         <p>Navigation</p>
                     </div>
                     {navItems.map((data, index) => {
                         return (
-                            <div
+                            <motion.div
                                 key={index}
-                                // data={{...data, index}}
-                                // isActive={selectedIndicator == data.href}
-                                // setSelectedIndicator={setSelectedIndicator}
+                                custom={index}
+                                variants={slide}
+                                initial="initial"
+                                animate="enter"
+                                exit="exit"
                             >
                                 {data.title}
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>

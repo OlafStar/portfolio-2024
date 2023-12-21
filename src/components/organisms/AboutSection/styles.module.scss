@@ -74,3 +74,19 @@
         object-fit: cover;
     }
 }
+
+.mobileNone {
+    display: bolc;
+
+    @media (max-width: 1080px){
+        display: none;
+    }
+}
+
+.desktopNone {
+    display: bolc;
+
+    @media (min-width: 1080px){
+        display: none;
+    }
+}
