@@ -17,7 +17,7 @@ const DescriptionSection = () => {
                                 /\bcreativity\b|\bis\b|\bcoded\b|\bmasterpiece\b|\bdigital\b/i,
                             )
                         }
-                        options={{margin: '-25%'}}
+                        options={{margin: '-25%', once: true}}
                     />
                 </div>
             </MaxWidthWrapper>

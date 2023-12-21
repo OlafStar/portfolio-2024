@@ -1,6 +1,10 @@
 .heroSectionContainer {
     height: 100vh;
     position: relative;
+
+    @media (max-width: 1080px) {
+        height: auto;
+    }
 }
 
 .heroSectionContentContainer {
