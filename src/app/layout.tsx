@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 
 import '~/styles/globals.scss';
+import Navigation from '~components/molecules/Navigation';
 import Providers from '~components/providers';
 import {clashGrotesk} from '~fonts/clashGrotesk';
 
@@ -13,7 +14,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
         <html lang="en">
             <body className={clashGrotesk.className}>
-                <Providers>{children}</Providers>
+                <Providers>
+                    <Navigation />
+                    {children}
+                </Providers>
             </body>
         </html>
     );
