@@ -35,9 +35,6 @@ export default function index() {
         >
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>{'Navigation'}</p>
-                    </div>
                     {navItems.map((data, index) => {
                         return (
                             <motion.div
