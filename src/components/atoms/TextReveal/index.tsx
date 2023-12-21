@@ -1,23 +1,27 @@
 'use client';
 
-import {motion} from 'framer-motion';
+import {useInView, motion} from 'framer-motion';
 import {useRef} from 'react';
 import {PropsWithClassName} from '~/types/general';
+import {slideUp} from '../../../utils/animations';
+import {Options} from '~/types/inView';
 import styles from './styles.module.scss';
-import {slideUp} from '~utils/animations';
 
-const MaskText = ({
+const TextReveal = ({
     text,
     className,
+    options,
     wordsGap = 3,
-    delay = 0,
 }: PropsWithClassName & {
     text: string;
+    options?: Options;
     wordsGap?: number;
-    delay?: number;
 }) => {
+    const description = useRef<HTMLDivElement>(null);
+    const isInView = useInView(description, {...options});
+    
     return (
-        <div className={styles.container}>
+        <div ref={description} className={styles.container}>
             <div className={`${styles.textContainer} ${className}`}>
                 <p>
                     {text.split(' ').map((word, index) => {
@@ -25,9 +29,8 @@ const MaskText = ({
                             <span key={index} className={styles.spanText}>
                                 <motion.span
                                     variants={slideUp}
-                                    custom={{i: index, delay}}
-                                    initial={'initial'}
-                                    animate={'open'}
+                                    custom={{i: index, delay: 0}}
+                                    animate={isInView ? 'open' : 'closed'}
                                     key={index}
                                 >
                                     {word}
@@ -41,4 +44,4 @@ const MaskText = ({
     );
 };
 
-export default MaskText;
+export default TextReveal;
