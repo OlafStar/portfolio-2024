@@ -39,7 +39,7 @@
 }
 
 .heroDescriptionContainer {
-  max-width: 660px;
+    max-width: clamp(41.25rem, -22.5rem + 70.833vw, 62.5rem);
     align-self: end;
 
     @media (max-width: 1080px) {
