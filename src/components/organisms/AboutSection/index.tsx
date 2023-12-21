@@ -1,7 +1,9 @@
-import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
-import styles from './styles.module.scss';
-import TextReveal from '~components/atoms/TextReveal';
 import Image from 'next/image';
+
+import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
+import TextReveal from '~components/atoms/TextReveal';
+
+import styles from './styles.module.scss';
 
 const AboutSection = () => {
     return (

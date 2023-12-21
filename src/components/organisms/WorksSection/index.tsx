@@ -1,7 +1,8 @@
 import InfiniteTitle from '~components/molecules/InfiniteTitle';
-import styles from './styles.module.scss';
 import {works} from '~config/works';
 import WorkElement from '~components/molecules/WorkElement';
+
+import styles from './styles.module.scss';
 
 const WorksSection = () => {
     return (

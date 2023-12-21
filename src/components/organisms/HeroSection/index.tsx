@@ -1,10 +1,12 @@
 'use client';
 
+import {motion} from 'framer-motion';
+
 import MaskText from '~components/atoms/MaskText';
-import styles from './styles.module.scss';
 import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
 import InfiniteTitle from '~components/molecules/InfiniteTitle';
-import {motion} from 'framer-motion';
+
+import styles from './styles.module.scss';
 
 const HeroSection = () => {
     return (
@@ -12,7 +14,11 @@ const HeroSection = () => {
             <MaxWidthWrapper>
                 <div className={styles.heroSectionContentContainer}>
                     <div className={styles.heroSectionContent}>
-                        <div className={styles.heroText} data-scroll data-scroll-speed='0.1'>
+                        <div
+                            className={styles.heroText}
+                            data-scroll
+                            data-scroll-speed="0.1"
+                        >
                             <MaskText
                                 className={styles.heroMainText}
                                 text={'WEB'}
@@ -24,7 +30,11 @@ const HeroSection = () => {
                                 delay={0.15}
                             />
                         </div>
-                        <div className={styles.heroDescriptionContainer} data-scroll data-scroll-speed='0.1'>
+                        <div
+                            className={styles.heroDescriptionContainer}
+                            data-scroll
+                            data-scroll-speed="0.1"
+                        >
                             <MaskText
                                 className={styles.heroDescriptionText}
                                 text={`As a passionate Creative Developer, I blend art and technology to create digital experiences that are not just functional, but also visually captivating and emotionally engaging.`}

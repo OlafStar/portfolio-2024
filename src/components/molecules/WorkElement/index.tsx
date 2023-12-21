@@ -1,13 +1,15 @@
 'use client';
 
-import {WorksElementType} from '~config/works';
-import styles from './styles.module.scss';
 import Image from 'next/image';
-import CoverReveal from '~components/atoms/CoverReveal';
 import {useEffect, useRef} from 'react';
 import {useInView} from 'framer-motion';
 
-const WorkElement = ({title, image, position, link}: WorksElementType) => {
+import CoverReveal from '~components/atoms/CoverReveal';
+import {WorksElementType} from '~config/works';
+
+import styles from './styles.module.scss';
+
+const WorkElement = ({title, image, position}: WorksElementType) => {
     const container = useRef<HTMLDivElement>(null);
     const isInView = useInView(container, {once: true, margin: '-50%'});
 

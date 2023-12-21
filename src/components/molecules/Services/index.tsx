@@ -1,8 +1,10 @@
 'use client';
-import styles from './styles.module.scss';
-import {data} from '~config/services';
-import Title from './title';
 import {Fragment} from 'react';
+
+import {data} from '~config/services';
+
+import styles from './styles.module.scss';
+import Title from './title';
 
 const Services = () => {
     return (

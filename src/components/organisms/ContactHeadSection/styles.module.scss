@@ -5,7 +5,7 @@
     gap: 140px;
 
     @media (max-width: 1080px) {
-      gap: clamp(1.25rem, -1.908rem + 15.789vw, 8.75rem);
+        gap: clamp(1.25rem, -1.908rem + 15.789vw, 8.75rem);
     }
 }
 

@@ -1,7 +1,8 @@
-import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
-import TextReveal from '~components/atoms/TextReveal';
-import styles from './styles.module.scss';
 import Link from 'next/link';
+
+import TextReveal from '~components/atoms/TextReveal';
+
+import styles from './styles.module.scss';
 
 const ContactSection = () => {
     return (

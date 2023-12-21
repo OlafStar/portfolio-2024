@@ -1,9 +1,11 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
-import styles from './styles.module.scss';
 import {AnimatePresence, motion} from 'framer-motion';
+
+import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
+
+import styles from './styles.module.scss';
 import HamburgerMenu from './HamburgerMenu';
 
 const Navigation = () => {

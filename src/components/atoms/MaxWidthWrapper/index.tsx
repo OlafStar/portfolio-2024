@@ -1,4 +1,5 @@
 import {PropsWithChildren} from 'react';
+
 import styles from './styles.module.scss';
 
 const MaxWidthWrapper = ({children}: PropsWithChildren) => {

@@ -1,7 +1,9 @@
 import React, {useRef} from 'react';
-import styles from './styles.module.scss';
 import {useScroll, motion, useTransform, useMotionTemplate} from 'framer-motion';
+
 import {ServicesType} from '~config/services';
+
+import styles from './styles.module.scss';
 
 const Title = ({
     titleDesktop,

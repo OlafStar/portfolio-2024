@@ -1,15 +1,15 @@
 'use client';
 
 import {motion} from 'framer-motion';
-import {useRef} from 'react';
+
 import {PropsWithClassName} from '~/types/general';
-import styles from './styles.module.scss';
 import {slideUp} from '~utils/animations';
+
+import styles from './styles.module.scss';
 
 const MaskText = ({
     text,
     className,
-    wordsGap = 3,
     delay = 0,
 }: PropsWithClassName & {
     text: string;

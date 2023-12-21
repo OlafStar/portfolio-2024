@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import styles from './styles.module.scss';
 import {motion} from 'framer-motion';
+
+import styles from './styles.module.scss';
 import {menuSlide, slide} from './anim';
 
 const navItems = [
@@ -35,7 +36,7 @@ export default function index() {
             <div className={styles.body}>
                 <div className={styles.nav}>
                     <div className={styles.header}>
-                        <p>Navigation</p>
+                        <p>{'Navigation'}</p>
                     </div>
                     {navItems.map((data, index) => {
                         return (
@@ -53,10 +54,9 @@ export default function index() {
                     })}
                 </div>
                 <div className={styles.footer}>
-                    <a>Awwwards</a>
-                    <a>Instagram</a>
-                    <a>Dribble</a>
-                    <a>LinkedIn</a>
+                    <a>{'Twitter'}</a>
+                    <a>{'olafnieliwodzki@wp.pl'}</a>
+                    <a>{'LinkedIn'}</a>
                 </div>
             </div>
         </motion.div>

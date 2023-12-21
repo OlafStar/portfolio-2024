@@ -6,7 +6,7 @@ const LocomotiveScrollProvider = ({children}: PropsWithChildren) => {
         (async () => {
             const LocomotiveScroll = (await import('locomotive-scroll')).default;
 
-            const locomotiveScroll = new LocomotiveScroll();
+            new LocomotiveScroll();
         })();
     }, []);
     return <>{children}</>;

@@ -2,16 +2,17 @@
 
 import {useInView, motion} from 'framer-motion';
 import {useRef} from 'react';
+
 import {PropsWithClassName, PropsWithScrollInViewOptions} from '~/types/general';
+
 import {slideUp} from '../../../utils/animations';
-import {Options} from '~/types/inView';
+
 import styles from './styles.module.scss';
 
 const TextReveal = ({
     text,
     className,
     options,
-    wordsGap = 3,
     boldPattern, // Prop to accept a RegExp pattern
 }: PropsWithClassName &
     PropsWithScrollInViewOptions & {

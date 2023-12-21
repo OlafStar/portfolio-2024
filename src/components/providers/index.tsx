@@ -1,4 +1,5 @@
 import {PropsWithChildren} from 'react';
+
 import LocomotiveScrollProvider from './LocomotiveScrollProvider';
 
 const Providers = ({children}: PropsWithChildren) => {

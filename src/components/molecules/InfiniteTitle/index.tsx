@@ -1,5 +1,6 @@
 import React, {PropsWithChildren} from 'react';
 import Marquee from 'react-fast-marquee';
+
 import styles from './styles.module.scss';
 
 type MarqueeProps = React.ComponentProps<typeof Marquee>;
@@ -7,8 +8,8 @@ type MarqueeProps = React.ComponentProps<typeof Marquee>;
 const InfiniteTitle = ({
     children,
     enableOutline,
-    marqueeOptions
-}: PropsWithChildren & {enableOutline?: boolean, marqueeOptions?: MarqueeProps}) => {
+    marqueeOptions,
+}: PropsWithChildren & {enableOutline?: boolean; marqueeOptions?: MarqueeProps}) => {
     const cloneCount = 6;
 
     const clonedChildren = () => {
@@ -19,6 +20,7 @@ const InfiniteTitle = ({
                     clones.push(
                         React.cloneElement(child, {
                             key: i,
+                            //@ts-expect-error
                             className: `${child.props.className || ''} ${
                                 i % 2 === 0 && enableOutline && styles.outline
                             }`,
@@ -32,7 +34,7 @@ const InfiniteTitle = ({
     };
 
     return (
-        <Marquee {...marqueeOptions}>
+        <Marquee {...marqueeOptions} className={styles.hidden}>
             {clonedChildren()}
             {clonedChildren()}
             {clonedChildren()}

@@ -1,10 +1,12 @@
 'use client';
 
 import {PropsWithChildren, useRef} from 'react';
-import styles from './styles.module.scss';
 import {motion, useInView} from 'framer-motion';
+
 import {PropsWithScrollInViewOptions} from '~types/general';
 import {slideOutXRight} from '~utils/animations';
+
+import styles from './styles.module.scss';
 
 const CoverReveal = ({
     children,
