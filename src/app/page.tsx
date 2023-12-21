@@ -1,8 +1,7 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 import HeroSection from '~components/organisms/HeroSection'
 import AboutSection from '~components/organisms/AboutSection'
 import ServicesSection from '~components/organisms/ServicesSection'
+import DescriptionSection from '~components/organisms/DescriptionSection'
 
 export default function Home() {
   return (
@@ -10,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <DescriptionSection />
     </main>
   )
 }

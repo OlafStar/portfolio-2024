@@ -20,7 +20,7 @@ const AboutSection = () => {
                         <TextReveal
                             className={styles.aboutText}
                             text={`Hi im Olaf. Front-end and animation enthusiast and full-stack programmer. Creates dynamic, engaging websites from concept to completion. Let's bring your ideas to life!`}
-                            options={{once: true}}
+                            options={{once: true, margin: '-25%'}}
                         />
                     </div>
                     <div className={styles.aboutSecondImage}>

@@ -1,0 +1,26 @@
+.descriptionSectionContainer {
+    min-height: 100vh;
+}
+
+.sectionContent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(4rem, -1.25rem + 5.833vw, 5.75rem);
+    line-height: 100%;
+    text-align: center;
+
+    @media (max-width: 1080px) {
+        font-size: clamp(2rem, 1.158rem + 4.211vw, 4rem);
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.textContent {
+    max-width: clamp(62.5rem, -14.375rem + 85.417vw, 88.125rem);
+}
