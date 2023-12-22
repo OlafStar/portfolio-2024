@@ -4,7 +4,10 @@ export const slideUp = {
     },
     open: ({i, delay = 0}: {i: number; delay?: number}) => ({
         y: '0%',
-        transition: {duration: 0.5, delay: 0.015 * i + delay},
+        transition: {
+            duration: 0.5,
+            delay: 0.015 * i + delay,
+        },
     }),
     closed: {
         y: '100%',
@@ -19,6 +22,7 @@ export const slideOutXRight = {
     out: (delay: number) => ({
         x: '110%',
         transition: {delay: delay},
+        ease: [0.28, 0.9, 0.29, 0.9],
     }),
 };
 

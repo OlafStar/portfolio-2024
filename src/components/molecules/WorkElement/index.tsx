@@ -6,10 +6,11 @@ import {useInView} from 'framer-motion';
 
 import CoverReveal from '~components/atoms/CoverReveal';
 import {WorksElementType} from '~config/works';
+import CustomLink from '~components/atoms/CustomLink';
 
 import styles from './styles.module.scss';
 
-const WorkElement = ({title, image, position}: WorksElementType) => {
+const WorkElement = ({title, image, position, link}: WorksElementType) => {
     const container = useRef<HTMLDivElement>(null);
     const isInView = useInView(container, {once: true, margin: '-50%'});
 
@@ -37,9 +38,11 @@ const WorkElement = ({title, image, position}: WorksElementType) => {
                 />
             </div>
             <div className={styles.workBottomBar}>
-                <CoverReveal customInView={isInView} delay={0.3}>
-                    <div>{'Explore'}</div>
-                </CoverReveal>
+                <CustomLink href={link}>
+                    <CoverReveal customInView={isInView} delay={0.3}>
+                        <div>{'Explore'}</div>
+                    </CoverReveal>
+                </CustomLink>
             </div>
         </div>
     );

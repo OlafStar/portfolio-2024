@@ -2,6 +2,8 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 
+import CustomLink from '~components/atoms/CustomLink';
+
 import styles from './styles.module.scss';
 import {menuSlide, slide} from './anim';
 
@@ -37,23 +39,31 @@ export default function index() {
                 <div className={styles.nav}>
                     {navItems.map((data, index) => {
                         return (
-                            <motion.div
-                                key={index}
-                                custom={index}
-                                variants={slide}
-                                initial="initial"
-                                animate="enter"
-                                exit="exit"
-                            >
-                                {data.title}
-                            </motion.div>
+                            <CustomLink key={index} href={data.href}>
+                                <motion.div
+                                    custom={index}
+                                    variants={slide}
+                                    initial="initial"
+                                    animate="enter"
+                                    exit="exit"
+                                    style={{width: 'fit-content'}}
+                                >
+                                    {data.title}
+                                </motion.div>
+                            </CustomLink>
                         );
                     })}
                 </div>
                 <div className={styles.footer}>
-                    <a>{'Twitter'}</a>
-                    <a>{'olafnieliwodzki@wp.pl'}</a>
-                    <a>{'LinkedIn'}</a>
+                    <CustomLink href={'#'}>
+                        <a>{'Twitter'}</a>
+                    </CustomLink>
+                    <CustomLink href={'#'}>
+                        <a>{'olafnieliwodzki@wp.pl'}</a>
+                    </CustomLink>
+                    <CustomLink href={'#'}>
+                        <a>{'LinkedIn'}</a>
+                    </CustomLink>
                 </div>
             </div>
         </motion.div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import TextReveal from '~components/atoms/TextReveal';
+import CustomLink from '~components/atoms/CustomLink';
 
 import styles from './styles.module.scss';
 
@@ -13,7 +14,9 @@ const ContactSection = () => {
                 <TextReveal text="AMAZING TOGETHER" className={styles.mainText} />
             </div>
             <div className={styles.linksDesktop}>
-                <div className={styles.additionalLink}>{'LinkedIn'}</div>
+                <CustomLink href="#">
+                    <div className={styles.additionalLink}>{'LinkedIn'}</div>
+                </CustomLink>
                 <Link
                     href={'mailto:olafnieliwodzki@wp.pl'}
                     className={styles.button}
@@ -25,7 +28,9 @@ const ContactSection = () => {
                         </div>
                     </div>
                 </Link>
-                <div className={styles.additionalLink}>{'Twitter'}</div>
+                <CustomLink href="#">
+                    <div className={styles.additionalLink}>{'Twitter'}</div>
+                </CustomLink>
             </div>
 
             <div className={styles.linksMobile}>
