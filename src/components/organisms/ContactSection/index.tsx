@@ -27,6 +27,16 @@ const ContactSection = () => {
                             {'olafnieliwodzki@wp.pl'}
                         </div>
                     </div>
+                    <div className={styles.mask}>
+                        <div className={styles.buttonContent}>
+                            <div className={styles.buttonText}>
+                                {'Write a message'}
+                            </div>
+                            <div style={{fontSize: '16px'}}>
+                                {'olafnieliwodzki@wp.pl'}
+                            </div>
+                        </div>
+                    </div>
                 </Link>
                 <CustomLink href="#">
                     <div className={styles.additionalLink}>{'Twitter'}</div>

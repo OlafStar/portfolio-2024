@@ -18,6 +18,11 @@ export const data: ServicesType[] = [
         speed: 0.5,
     },
     {
+        titleDesktop: 'ECOMMERCE SHOP',
+        titleMobile: 'ECOMMERCE',
+        speed: 0.58,
+    },
+    {
         titleDesktop: 'UI/UX DESIGN',
         titleMobile: 'UI/UX DESIGN',
         speed: 0.67,
@@ -30,7 +35,7 @@ export const data: ServicesType[] = [
     {
         titleDesktop: 'BLOCKCHAIN DEVELOPMENT',
         titleMobile: 'BLOCKCHAIN',
-        speed: 0.8,
+        speed: 0.9,
     },
 ];
 
