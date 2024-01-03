@@ -56,13 +56,13 @@ export default function index() {
                 </div>
                 <div className={styles.spacer} />
                 <div className={styles.footer}>
-                    <CustomLink href={'#'}>
+                    <CustomLink href={'https://twitter.com/olaf_star'}>
                         <a>{'Twitter'}</a>
                     </CustomLink>
-                    <CustomLink href={'#'}>
+                    <CustomLink href={'mailto:nieliwodzkiolaf@gmail.com'}>
                         <a>{'nieliwodzkiolaf@gmail.com'}</a>
                     </CustomLink>
-                    <CustomLink href={'#'}>
+                    <CustomLink href={'https://www.linkedin.com/in/olaf-nieliwodzki/'}>
                         <a>{'LinkedIn'}</a>
                     </CustomLink>
                 </div>
