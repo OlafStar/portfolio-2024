@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 const DescriptionSection = () => {
     return (
-        <section className={styles.descriptionSectionContainer}>
+        <section id={'description'} className={styles.descriptionSectionContainer}>
             <MaxWidthWrapper>
                 <div
                     className={styles.sectionContent}

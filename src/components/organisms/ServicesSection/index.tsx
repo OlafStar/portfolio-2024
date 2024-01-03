@@ -3,7 +3,7 @@ import Services from '~components/molecules/Services';
 
 const ServicesSection = () => {
     return (
-        <section>
+        <section id={'services'}>
             <MaxWidthWrapper>
                 <Services />
             </MaxWidthWrapper>

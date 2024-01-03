@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 
 const HeroSection = () => {
     return (
-        <section className={styles.heroSectionContainer}>
+        <section id={'hero'} className={styles.heroSectionContainer}>
             <MaxWidthWrapper>
                 <div className={styles.heroSectionContentContainer}>
                     <div className={styles.heroSectionContent}>
@@ -21,7 +21,7 @@ const HeroSection = () => {
                         >
                             <MaskText
                                 className={styles.heroMainText}
-                                text={'WEB'}
+                                text={'CREATIVE'}
                                 delay={0}
                             />
                             <MaskText

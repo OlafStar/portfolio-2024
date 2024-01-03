@@ -10,19 +10,19 @@ import {menuSlide, slide} from './anim';
 const navItems = [
     {
         title: 'Home',
-        href: '/',
+        href: '#hero',
     },
     {
         title: 'Work',
-        href: '/work',
+        href: '#work',
     },
     {
         title: 'About',
-        href: '/about',
+        href: '#about',
     },
     {
         title: 'Contact',
-        href: '/contact',
+        href: '#contact',
     },
 ];
 
@@ -39,7 +39,7 @@ export default function index() {
                 <div className={styles.nav}>
                     {navItems.map((data, index) => {
                         return (
-                            <CustomLink key={index} href={data.href}>
+                            <a data-scroll-to data-scroll-to-duration={5} key={index} href={data.href}>
                                 <motion.div
                                     custom={index}
                                     variants={slide}
@@ -50,16 +50,17 @@ export default function index() {
                                 >
                                     {data.title}
                                 </motion.div>
-                            </CustomLink>
+                            </a>
                         );
                     })}
                 </div>
+                <div className={styles.spacer} />
                 <div className={styles.footer}>
                     <CustomLink href={'#'}>
                         <a>{'Twitter'}</a>
                     </CustomLink>
                     <CustomLink href={'#'}>
-                        <a>{'olafnieliwodzki@wp.pl'}</a>
+                        <a>{'nieliwodzkiolaf@gmail.com'}</a>
                     </CustomLink>
                     <CustomLink href={'#'}>
                         <a>{'LinkedIn'}</a>

@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 const ContactSection = () => {
     return (
-        <section className={styles.container}>
+        <section id={'contact'} className={styles.container}>
             <div className={styles.mainTextContainer}>
                 <TextReveal text="LET’S CREATE" className={styles.mainText} />
                 <TextReveal text="SOMETHING" className={styles.mainText} />
@@ -18,13 +18,13 @@ const ContactSection = () => {
                     <div className={styles.additionalLink}>{'LinkedIn'}</div>
                 </CustomLink>
                 <Link
-                    href={'mailto:olafnieliwodzki@wp.pl'}
+                    href={'mailto:nieliwodzkiolaf@gmail.com'}
                     className={styles.button}
                 >
                     <div className={styles.buttonContent}>
                         <div style={{maxWidth: '174px'}}>{'Write a message'}</div>
                         <div style={{fontSize: '16px'}}>
-                            {'olafnieliwodzki@wp.pl'}
+                            {'nieliwodzkiolaf@gmail.com'}
                         </div>
                     </div>
                     <div className={styles.mask}>
@@ -33,7 +33,7 @@ const ContactSection = () => {
                                 {'Write a message'}
                             </div>
                             <div style={{fontSize: '16px'}}>
-                                {'olafnieliwodzki@wp.pl'}
+                                {'nieliwodzkiolaf@gmail.com'}
                             </div>
                         </div>
                     </div>
@@ -45,13 +45,13 @@ const ContactSection = () => {
 
             <div className={styles.linksMobile}>
                 <Link
-                    href={'mailto:olafnieliwodzki@wp.pl'}
+                    href={'mailto:nieliwodzkiolaf@gmail.com'}
                     className={styles.button}
                 >
                     <div className={styles.buttonContent}>
                         <div className={styles.buttonText}>{'Write a message'}</div>
                         <div style={{fontSize: '16px'}}>
-                            {'olafnieliwodzki@wp.pl'}
+                            {'nieliwodzkiolaf@gmail.com'}
                         </div>
                     </div>
                 </Link>

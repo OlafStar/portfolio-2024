@@ -59,11 +59,38 @@
             }
         }
     }
+    spacer {
+        display: none;
+        flex: 1;
+    }
     .footer {
         display: flex;
         width: 100%;
         justify-content: space-between;
         font-size: 16px;
         gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .body {
+            padding: 0;
+            justify-content: center;
+        }
+
+        .spacer {
+            display: block;
+            flex: 1;
+            max-height: 50px;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 }

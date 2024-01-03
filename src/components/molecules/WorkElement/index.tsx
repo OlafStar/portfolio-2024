@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import {useEffect, useRef} from 'react';
 import {useInView} from 'framer-motion';
+import {ArrowUpRight} from 'lucide-react';
 
 import CoverReveal from '~components/atoms/CoverReveal';
 import {WorksElementType} from '~config/works';
@@ -10,9 +10,9 @@ import CustomLink from '~components/atoms/CustomLink';
 
 import styles from './styles.module.scss';
 
-const WorkElement = ({title, image, position, link}: WorksElementType) => {
+const WorkElement = ({title, position, link}: WorksElementType) => {
     const container = useRef<HTMLDivElement>(null);
-    const isInView = useInView(container, {once: true, margin: '-50%'});
+    const isInView = useInView(container, {once: true, margin: '-20%'});
 
     useEffect(() => {
         console.log(isInView);
@@ -20,30 +20,20 @@ const WorkElement = ({title, image, position, link}: WorksElementType) => {
 
     return (
         <div ref={container} className={styles.workElementContainer}>
-            <div className={styles.workTopBar}>
-                <CoverReveal customInView={isInView} delay={0}>
-                    <div>{title}</div>
-                </CoverReveal>
-                <CoverReveal customInView={isInView} delay={0}>
-                    <div style={{textTransform: 'uppercase'}}>{position}</div>
-                </CoverReveal>
-            </div>
-            <div className={styles.imageContainer}>
-                <Image
-                    src={image}
-                    alt={title}
-                    width={1000}
-                    height={700}
-                    className={styles.image}
-                />
-            </div>
-            <div className={styles.workBottomBar}>
-                <CustomLink href={link}>
-                    <CoverReveal customInView={isInView} delay={0.3}>
+            <CoverReveal customInView={isInView} delay={0}>
+                <div>{title}</div>
+            </CoverReveal>
+            <CoverReveal customInView={isInView} delay={0.1}>
+                <div style={{textTransform: 'uppercase'}}>{position}</div>
+            </CoverReveal>
+            <CustomLink href={link}>
+                <CoverReveal customInView={isInView} delay={0.3}>
+                    <div className={styles.explore} style={{display: 'flex', gap: '4px'}}>
                         <div>{'Explore'}</div>
-                    </CoverReveal>
-                </CustomLink>
-            </div>
+                        <ArrowUpRight />
+                    </div>
+                </CoverReveal>
+            </CustomLink>
         </div>
     );
 };

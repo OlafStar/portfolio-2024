@@ -1,12 +1,11 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {AnimatePresence, motion} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
 
 import styles from './styles.module.scss';
-import HamburgerMenu from './HamburgerMenu';
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,20 +15,20 @@ const Navigation = () => {
         setIsOpen(!isOpen);
     };
 
-    const lineVariants = {
-        closed: {width: 32, opacity: 1},
-        open: {width: 0, opacity: 0},
-    };
+    // const lineVariants = {
+    //     closed: {width: 32, opacity: 1},
+    //     open: {width: 0, opacity: 0},
+    // };
 
-    const topLineVariants = {
-        closed: {rotate: 0, translateY: 0},
-        open: {rotate: 45, translateY: 13},
-    };
+    // const topLineVariants = {
+    //     closed: {rotate: 0, translateY: 0},
+    //     open: {rotate: 45, translateY: 13},
+    // };
 
-    const bottomLineVariants = {
-        closed: {rotate: 0, translateY: 0},
-        open: {rotate: -45, translateY: -13},
-    };
+    // const bottomLineVariants = {
+    //     closed: {rotate: 0, translateY: 0},
+    //     open: {rotate: -45, translateY: -13},
+    // };
 
     useEffect(() => {
         let scrollTimeout: NodeJS.Timeout | null = null;
@@ -66,7 +65,7 @@ const Navigation = () => {
                             <span className={styles.logo}>{'OLAF NIELIWODZKI'}</span>
                         </div>
                         <div className={styles.button} onClick={toggleMenu}>
-                            <motion.div
+                            {/* <motion.div
                                 className={styles.line}
                                 variants={topLineVariants}
                                 animate={isOpen ? 'open' : 'closed'}
@@ -80,14 +79,14 @@ const Navigation = () => {
                                 className={styles.line}
                                 variants={bottomLineVariants}
                                 animate={isOpen ? 'open' : 'closed'}
-                            />
+                            /> */}
                         </div>
                     </div>
                 </MaxWidthWrapper>
             </motion.nav>
-            <AnimatePresence mode="wait">
+            {/* <AnimatePresence mode="wait">
                 {isOpen && <HamburgerMenu />}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </>
     );
 };
