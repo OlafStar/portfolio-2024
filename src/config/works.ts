@@ -18,18 +18,18 @@ export const works: WorksElementType[] = [
         link: 'https://getmeteotrack.com/agro/en',
     },
     {title: 'Everdome', position: 'PART OF TEAM', image: '', link: 'https://everdome.io/'},
-    {title: 'Everdome Metaverse', position: 'PART OF TEAM', image: '', link: '#'},
+    {title: 'Everdome Metaverse', position: 'PART OF TEAM', image: '', link: 'https://metaverse.everdome.io/'},
     {
         title: 'Everdome Game Download',
         position: 'PART OF TEAM',
         image: '',
-        link: '#',
+        link: 'https://metaverse.everdome.io/download',
     },
     {
         title: 'Everdome Map',
         position: 'PART OF TEAM',
         image: '',
-        link: '#',
+        link: 'https://map.everdome.io/',
     },
 ];
 
