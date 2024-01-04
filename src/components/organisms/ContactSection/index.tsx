@@ -56,8 +56,13 @@ const ContactSection = () => {
                     </div>
                 </Link>
                 <div className={styles.linksMobileBottom}>
-                    <div className={styles.additionalLink}>{'LinkedIn'}</div>
-                    <div className={styles.additionalLink}>{'Twitter'}</div>
+                    <a
+                        href={'https://www.linkedin.com/in/olaf-nieliwodzki/'}
+                        className={styles.additionalLink}
+                    >
+                        {'LinkedIn'}
+                    </a>
+                    <a href={'https://twitter.com/olaf_star'} className={styles.additionalLink}>{'Twitter'}</a>
                 </div>
             </div>
         </section>
