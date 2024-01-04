@@ -14,7 +14,7 @@ const ContactSection = () => {
                 <TextReveal text="AMAZING TOGETHER" className={styles.mainText} />
             </div>
             <div className={styles.linksDesktop}>
-                <CustomLink href="#">
+                <CustomLink href="https://www.linkedin.com/in/olaf-nieliwodzki/">
                     <div className={styles.additionalLink}>{'LinkedIn'}</div>
                 </CustomLink>
                 <Link
@@ -38,7 +38,7 @@ const ContactSection = () => {
                         </div>
                     </div>
                 </Link>
-                <CustomLink href="#">
+                <CustomLink href="https://twitter.com/olaf_star">
                     <div className={styles.additionalLink}>{'Twitter'}</div>
                 </CustomLink>
             </div>
