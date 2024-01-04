@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 
 import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolling, setIsScrolling] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -29,11 +30,34 @@ const Navigation = () => {
     //     open: {rotate: -45, translateY: -13},
     // };
 
+    useEffect(() => {
+        let scrollTimeout: NodeJS.Timeout | null = null;
+
+        const handleScroll = () => {
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+
+            if (window.innerWidth > 768) {
+                setIsScrolling(true);
+            }
+            scrollTimeout = setTimeout(() => {
+                setIsScrolling(false);
+            }, 65);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+        };
+    }, []);
+
     return (
         <>
             <motion.nav
                 className={styles.navigation}
                 initial={{y: 0}}
+                animate={{y: isScrolling ? -100 : 0}}
                 transition={{type: 'tween'}}
             >
                 <MaxWidthWrapper>
