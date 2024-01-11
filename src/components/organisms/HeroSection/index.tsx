@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import MaskText from '~components/atoms/MaskText';
 import MaxWidthWrapper from '~components/atoms/MaxWidthWrapper';
 import InfiniteTitle from '~components/molecules/InfiniteTitle';
+import PerspectiveWrapper from '~components/molecules/PerspectiveWrapper';
 
 import styles from './styles.module.scss';
 
@@ -13,7 +14,7 @@ const HeroSection = () => {
         <section id={'hero'} className={styles.heroSectionContainer}>
             <MaxWidthWrapper>
                 <div className={styles.heroSectionContentContainer}>
-                    <div className={styles.heroSectionContent}>
+                    <PerspectiveWrapper maxXRotation={20}  className={styles.heroSectionContent}>
                         <div
                             className={styles.heroText}
                             data-scroll
@@ -41,7 +42,7 @@ const HeroSection = () => {
                                 delay={0.5}
                             />
                         </div>
-                    </div>
+                    </PerspectiveWrapper>
                 </div>
             </MaxWidthWrapper>
 

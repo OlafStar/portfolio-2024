@@ -21,7 +21,11 @@
 .heroSectionContent {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 32px;
+    align-items: center;
+    @media (min-width: 1080px) {
+        transform: translateY(-63.5px);
+    }
 
     @media (max-width: 1080px) {
         gap: 32px;
@@ -33,6 +37,9 @@
 .heroText {
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .heroMainText {
@@ -46,7 +53,7 @@
 
 .heroDescriptionContainer {
     max-width: clamp(41.25rem, -22.5rem + 70.833vw, 62.5rem);
-    align-self: end;
+    text-align: center;
 
     @media (max-width: 1080px) {
         align-self: auto;
@@ -55,7 +62,7 @@
 
 .heroDescriptionText {
     font-weight: 300;
-    font-size: clamp(2rem, -1rem + 3.333vw, 3rem); // 32 - 48 | 1440 - 1920
+    font-size: clamp(1.5rem, 0rem + 1.667vw, 2rem); // 24 - 32 | 1440 - 1920
 
     @media (max-width: 1080px) {
         font-size: clamp(0.875rem, 0.401rem + 2.368vw, 2rem); // 14 - 32 | 320 - 1080
